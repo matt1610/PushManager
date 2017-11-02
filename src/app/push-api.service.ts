@@ -29,7 +29,7 @@ export class PushApiService {
     console.log(pushRequest);
     return this.http.post("https://voltexpush.azurewebsites.net/api/SendPushNotification?code=v8b3OkArRsxdZuqzHE9qdysufaInFn4r1ga15AGkEhS4jn8Dp7SfTA==",
     // return this.http.post("https://requestb.in/1jybe041",
-      JSON.stringify(pushRequest), {
+      pushRequest, {
         headers: new HttpHeaders().set('Content-Type', 'application/json')
       });
   }
