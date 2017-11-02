@@ -1,0 +1,27 @@
+
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Title" [(ngModel)]="pushRequest.title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Subtitle" [(ngModel)]="pushRequest.subtitle">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Body" [(ngModel)]="pushRequest.body"></textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="App ID" [(ngModel)]="pushRequest.appId">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="API Key" [(ngModel)]="pushRequest.apiKey">
+  </mat-form-field>
+
+  <div class="button-row">
+    <button mat-raised-button color="accent" (click)="SendNotification()">Send Notification</button>
+    <!-- <mat-spinner class="sendingLoader" mode="indeterminate" color="accent" diameter="50"></mat-spinner> -->
+  </div>
+</div>

@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatCardModule, MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
+import { NotificationDialogComponent } from '../app/notification-dialog/notification-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(public dialog: MatDialog) {
+
+  }
+
+  public NewNotification() {
+    let dialogRef = this.dialog.open(NotificationDialogComponent, {
+      width: '50%'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      
+    });
+  }
+
+
+
 }
